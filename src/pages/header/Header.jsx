@@ -1,5 +1,4 @@
 import UserProfileBar from "./UserProfileBar";
-
 import { IoIosPlanet } from "react-icons/io";
 
 export default function Header() {

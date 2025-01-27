@@ -12,8 +12,7 @@ import { AditionActivity } from "./style"; // CARD QUE VAI APARECER
 import { AdicionarTarefa } from "./style";
 import { Container } from "./style";
 import { CardListen } from "./style";
-import Card from "./subcomponents-cellphones/Card";
-import BtnAdd from "./subcomponents-cellphones/BtnAdd";
+import BtnAddAtividade from "./subcomponents-cellphones/BtnAddAtividade";
 
 export default function ActivetyCard() {
   // ANIMATIONS
@@ -45,32 +44,24 @@ export default function ActivetyCard() {
   const [activity, setActivity] = useState("");
   const [activitiesList, setActivitiesList] = useState([]);
 
-  // const [timeList, setTimeList] = useState([]);
+  const [time, setTime] = useState("");
 
   const addActivityToMainComponent = () => {
     if (activity != "") {
       setActivitiesList((prevActivities) => [...prevActivities, activity]);
       setActivity("");
-      // setTime("");
     }
     handleToggle();
   };
 
-  // const handleHoraChange = () => {
-  //   if (time != "" && time != 0) {
-  //     setTimeList((prevTime) => [...prevTime, time]);
-  //     // setTime(event.target.value);
-  //     setTime("");
-  //   }
   // };
 
   const handleText = (e) => {
     setActivity(e.target.value);
   };
 
-  const [time, setTime] = useState("");
-  const handleHoraChange = (event) => {
-    setTime(event.target.value); // A
+  const handleHoraChange = (e) => {
+    setTime(e.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -88,8 +79,8 @@ export default function ActivetyCard() {
       <Container>
         {/* CODIGO CORRETO ABAIXO */}
         <h1>Atividades</h1>
-        <BtnAdd></BtnAdd>
         <CadastrarAtividade onToggle={handleToggle}></CadastrarAtividade>
+
         {isVisible && (
           <AdicionarTarefa ref={boxRef}>
             <form onSubmit={handleSubmit}>
@@ -110,9 +101,10 @@ export default function ActivetyCard() {
                 className="custom-time-input"
               />
               {/* Passa a função addActivityToMainComponent para o Card */}
-              <Card
+              <BtnAddAtividade
                 // setTime={setTime}
                 activity={activity}
+                setTime={setTime}
                 setActivity={setActivity}
                 addActivityToMainComponent={addActivityToMainComponent}
               />
@@ -140,7 +132,7 @@ export default function ActivetyCard() {
                       {activity}
                     </span>
 
-                    <p key={index}>{time}</p>
+                    <p>{time}</p>
                   </li>
                 ))
               )}
@@ -151,6 +143,3 @@ export default function ActivetyCard() {
     </>
   );
 }
-
-// Fazer com que a hora do input que for ser adicionado nao interfira nos ja
-// postos na lista

@@ -1,3 +1,5 @@
+import UserPicture from "../../assets/default-avatar.jpg";
+
 export default function UserProfileBar() {
   return (
     <>
@@ -13,7 +15,7 @@ export default function UserProfileBar() {
         }}
       >
         <img
-          src=""
+          src={UserPicture}
           alt="teste"
           style={{
             height: "70px",
@@ -22,9 +24,19 @@ export default function UserProfileBar() {
             border: "1px solid #a9a9a9",
           }}
         />
-        <p style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-          Olá!
-          <span style={{ fontFamily: " Inter, serif" }}>User Name sla oq</span>
+        <p
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "4px",
+            fontFamily: " Inter, serif",
+            fontWeight: "700",
+          }}
+        >
+          Ola!
+          <span style={{ fontFamily: " Inter, serif", fontWeight: "300" }}>
+            User Name{" "}
+          </span>
         </p>
       </div>
     </>

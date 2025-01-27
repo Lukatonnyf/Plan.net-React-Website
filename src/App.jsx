@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import Loader from "./components/subcomponents-cellphones/Loading";
+import Loader from "./components/loader/Loading";
 import "./App.css";
 import { useEffect, useState } from "react";
 

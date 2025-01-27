@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-export default function Card({ addActivityToMainComponent }) {
+export default function BtnAddAtividade({ addActivityToMainComponent }) {
   return (
     <>
       <div>

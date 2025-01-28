@@ -28,7 +28,7 @@ export const CardListen = styled.div`
     height:200px;
     line-height:auto;
     overflow: scroll;
-    // border:2px dashed red;
+
     ul{
         width:100%;
         display:flex;
@@ -75,7 +75,8 @@ export const AditionActivity = styled.button`
     letter-spacing:0.5px;
     line-height:auto;
     border-radius:5px;
-    background:#bef264;
+    background:#8234e9;
+    color:#ffffff;
     margin-top:20px;
 `
 
@@ -85,6 +86,7 @@ export const AdicionarTarefa = styled.div`
     position:absolute;
     bottom:0;
     display:flex;
+    flex-direction:column;
     align-items:center;
     justify-content:center;
     max-width:100%;
@@ -94,12 +96,34 @@ export const AdicionarTarefa = styled.div`
     padding:10px;
     background:#18181b;
 
+div{
+        width:100%;
+        height:25px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:20px;
+        letter-spacing:2px;
+         
+        .fechar-btn{
+            position:absolute;
+            top:20px;
+            left:20px;
+            background:none;
+            border:none;
+            color:#efefef;
+            font-size:15px;
+        }
+}
+
     form {
         display:flex;
         flex-direction:column;
         align-items:center;
         justify-content:center;
         gap:20px;
+
+
 
         & input{
             width:300px;
@@ -108,9 +132,18 @@ export const AdicionarTarefa = styled.div`
             border-radius:5px;
             background:#09090b;
             color:#a1a1aa;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
         }
 
-        & button {
+
+        & input:focus{
+          outline: none;
+          border-color: #782cd9;}
+        
+          & button {
             padding:5px 20px;
             border:none;
             font-size:15px;
@@ -119,8 +152,19 @@ export const AdicionarTarefa = styled.div`
             letter-spacing:0.5px;
             line-height:auto;
             border-radius:5px;
-            background:#bef264;
+            color:#f9fcff;
+            background: #782cd9;
         }
+
+
+
+            input::-webkit-clear-button,
+            input::-webkit-inner-spin-button,
+            input::-webkit-calendar-picker-indicator {
+            display: none; /* Remove botões extras no Chrome */
+            }
+            
+
     }
 
 `

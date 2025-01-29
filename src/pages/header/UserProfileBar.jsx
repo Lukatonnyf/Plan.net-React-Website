@@ -1,4 +1,5 @@
 import UserPicture from "../../assets/default-avatar.jpg";
+import { Link } from "react-router-dom";
 
 export default function UserProfileBar() {
   return (
@@ -39,6 +40,20 @@ export default function UserProfileBar() {
           </span>
         </p>
       </div>
+
+      <button
+        style={{
+          padding: "0px",
+          fontWeight: "900",
+          borderRadius: "5px",
+          color: "#f9fcff",
+          background: "#782cd9",
+        }}
+      >
+        <Link style={{ textDecoration: "none", color: "#DBDBDB" }} to="/login">
+          Button teste
+        </Link>
+      </button>
     </>
   );
 }

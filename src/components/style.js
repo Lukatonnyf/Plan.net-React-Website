@@ -40,6 +40,7 @@ export const CardListen = styled.div`
     }
     
     li{
+        
         width:100%;
         list-style:none;
         display:flex;
@@ -78,7 +79,10 @@ export const AditionActivity = styled.button`
     background:#8234e9;
     color:#ffffff;
     margin-top:20px;
-`
+
+
+    
+    `
 
 // CARD PARA ADICIONAR AS TAREFAS
 
@@ -126,6 +130,7 @@ div{
 
 
         & input{
+            all:unset;
             width:300px;
             padding:15px 15px;
             border:1px solid #262629;    

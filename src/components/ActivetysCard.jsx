@@ -17,6 +17,16 @@ import TodoItens from "./TodoItens";
 
 export default function ActivetyCard() {
   // ANIMATIONS
+  // useLayoutEffect(() => {
+  //   gsap.to(".btn-adicionar-tarefa", {
+  //     duration: 2,
+  //     y: 0,
+  //     opacity: 1,
+  //     delay: 1.5,
+  //     scale: 1,
+  //     filter: "blur(0px)",
+  //   });
+  // }, []);
 
   // // LOGICA
   const CadastrarAtividade = ({ onToggle }) => {

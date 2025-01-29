@@ -1,7 +1,15 @@
 import UserProfileBar from "./UserProfileBar";
 import { IoIosPlanet } from "react-icons/io";
+// import { useState } from "react";
+// import UserTodo from "./userTodo";
 
 export default function Header() {
+  // const [testando, setTestando] = useState([]);
+
+  // const nameUser = (user) => {
+  //   setTestando([...testando, user]);
+  // };
+
   return (
     <>
       <div
@@ -31,6 +39,12 @@ export default function Header() {
           <h1 style={{ fontFamily: " Inter, serif" }}>Plan.net</h1>
         </div>
         <UserProfileBar />
+
+        {/* {testando.map((testando, index) => (
+          <>
+            <UserTodo key={index} todo={testando} />
+          </>
+        ))} */}
       </div>
     </>
   );

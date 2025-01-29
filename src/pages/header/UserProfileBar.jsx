@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import UserPicture from "../../assets/default-avatar.jpg";
 import { Link } from "react-router-dom";
 
-export default function UserProfileBar() {
+export default function UserProfileBar({ usuarios }) {
   return (
     <>
       <div
@@ -30,30 +31,32 @@ export default function UserProfileBar() {
             display: "flex",
             alignItems: "center",
             gap: "4px",
-            fontFamily: " Inter, serif",
+            fontFamily: "Inter, serif",
             fontWeight: "700",
           }}
         >
-          Ola!
-          <span style={{ fontFamily: " Inter, serif", fontWeight: "300" }}>
-            User Name{" "}
+          Olá!{" "}
+          <span style={{ fontFamily: "Inter, serif", fontWeight: "300" }}>
+            Olá {usuarios}
           </span>
         </p>
+        <button
+          style={{
+            padding: "0px",
+            fontWeight: "900",
+            borderRadius: "5px",
+            color: "#f9fcff",
+            background: "#782cd9",
+          }}
+        >
+          <Link
+            style={{ textDecoration: "none", color: "#DBDBDB" }}
+            to="/login"
+          >
+            Button teste
+          </Link>
+        </button>
       </div>
-
-      <button
-        style={{
-          padding: "0px",
-          fontWeight: "900",
-          borderRadius: "5px",
-          color: "#f9fcff",
-          background: "#782cd9",
-        }}
-      >
-        <Link style={{ textDecoration: "none", color: "#DBDBDB" }} to="/login">
-          Button teste
-        </Link>
-      </button>
     </>
   );
 }
